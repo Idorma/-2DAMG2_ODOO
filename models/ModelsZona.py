@@ -19,7 +19,7 @@ from odoo import models
 class ZonaEntity(models.Model):
     _name = 'lauserri.zona'
 
-    nombreZona = fields.String()
+    nombreZona = fields.Char()
     fechaCreacionZona = fields.Date()
     granja = fields.Many2One('lauserri.granja')
     animales = fields.One2Many('lauserri.animal','zona', string="Animales por zona")
