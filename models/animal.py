@@ -16,7 +16,7 @@ from odoo import models, fields, api
 
 class AnimalEntity(models.Model):
     _name = 'lauserri.animal'
-    idAnimal = fields.Long()
+    
     nombreAnimal = fields.String()
     tipo = fields.TipoAnimal()
     estado = fields.EstadoAnimal()
