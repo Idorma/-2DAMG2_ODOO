@@ -13,3 +13,13 @@ from odoo import models, fields, api
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+
+class AnimalEntity(models.Model):
+    _name = 'lauserri.animal'
+    
+    nombreAnimal = fields.String()
+    tipo = fields.TipoAnimal()
+    estado = fields.EstadoAnimal()
+    fechaNacimiento = fields.Date()
+    sexo = fields.SexoAnimal()
+    zona = fields.Many2one('lauserri.zona')
