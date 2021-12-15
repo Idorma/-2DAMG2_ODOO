@@ -19,7 +19,6 @@ from odoo import models
 class ZonaEntity(models.Model):
     _name = 'lauserri.zona'
 
-    idZona = fields.Long()
     nombreZona = fields.String()
     fechaCreacionZona = fields.Date()
     granja = fields.Many2One('lauserri.granja')
