@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from . import Contrato
-from . import ModelsZona
-from . import Trabajador
+from . import contrato
+from . import zona
+from . import trabajador
 from . import animal
 from . import granja
-from . import modelsGranjero
+from . import granjero
