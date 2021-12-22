@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from . import controllers
-from . import models
+import controllers.controllers
+import models.Contrato
+import models.ModelsZona
+import models.Trabajador
+import models.animal
+import models.granja
+import models.modelsGranjero

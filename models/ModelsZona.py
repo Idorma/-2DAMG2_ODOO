@@ -20,6 +20,6 @@ class ZonaEntity(models.Model):
     _name = "lauserri.zona"
     nombreZona = fields.Char()
     fechaCreacionZona = fields.Date()
-    granja = fields.Many2One('lauserri.granja')
-    animales = fields.One2Many('lauserri.animal','zona', string="Animales por zona")
-    trabajadores = fields.Many2Many('lauserri.trabajador', string="Trabajadores por zona")
+    granja = fields.Many2one('lauserri.granja')
+    animales = fields.One2many('lauserri.animal','zona', string="Animales por zona")
+    trabajadores = fields.Many2many('lauserri.trabajador', string="Trabajadores por zona")

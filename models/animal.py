@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import api
+from odoo import fields
+from odoo import models
 
 # class lauserri(models.Model):
 #     _name = 'lauserri.lauserri'
@@ -16,9 +18,29 @@ from odoo import models, fields, api
 
 class AnimalEntity(models.Model):
     _name = 'lauserri.animal'
-    nombreAnimal = fields.String()
-    tipo = fields.TipoAnimal()
-    estado = fields.EstadoAnimal()
+    nombreAnimal = fields.Char()
+    tipo = fields.Selection([('a', 'TORO'),
+                            ('b', 'BUEY'),
+                            ('c', 'VACA'),
+                            ('d', 'CABALLO'),
+                            ('e', 'YEGUA'),
+                            ('f', 'ASNO'),
+                            ('g', 'MULA'),
+                            ('h', 'GALLO'),
+                            ('i', 'GALLINA'),
+                            ('j', 'PAVO'),
+                            ('k', 'OVEJA'),
+                            ('l', 'CARNERO'),
+                            ('m', 'CABRA'),
+                            ('n', 'CERDO')], string='TipoAnimal')
+    estado = fields.Selection([('a', 'SANO'),
+                              ('b', 'MUERTO'),
+                              ('c', 'ENFERMO'),
+                              ('d', 'EMBARAZADO'),
+                              ('e', 'VENDIDO'),
+                              ], string='EstadoAnimal')
     fechaNacimiento = fields.Date()
-    sexo = fields.SexoAnimal()
+    sexo = fields.Selection([('a', 'HEMBRA'),
+                            ('b', 'MACHO')
+                            ], string='SexoAnimal')
     zona = fields.Many2one('lauserri.zona')

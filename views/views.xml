@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record model="ir.actions.act_window" id="action_lauserri_list">
+        <!--<record model="ir.actions.act_window" id="action_lauserri_list">
             <field name="name">zonas</field>
             <field name="res_model">lauserri.zona</field>
             <field name="view_type">form</field>
@@ -10,7 +10,7 @@
         <menuitem id="main_lauserri_menu" name="Lauserri"/>
         <menuitem id="lauserri_menu" name="Open Lauserri" parent="main_lauserri_menu"/>
         <menuitem id="zona_lauserri_menu" name="lauserri" parent="lauserri_menu" action="action_lauserri_list"/>
-
+-->
         <!-- actions opening views on models -->
         <!--
         <record model="ir.actions.act_window" id="lauserri.action_window">
