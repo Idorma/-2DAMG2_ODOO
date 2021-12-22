@@ -7,4 +7,3 @@ class Trabajador(models.Model):
     _inherit = 'res.users'
     contratos = fields.One2Many('lauserri.contrato','trabajador',string='Contratos del trabajador')
     zonas = fields.Many2many('lauserri.zona', string='Zonas del trabajador')
-    

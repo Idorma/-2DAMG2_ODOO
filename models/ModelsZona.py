@@ -17,8 +17,7 @@ from odoo import models
 #         self.value2 = float(self.value) / 100
 
 class ZonaEntity(models.Model):
-    _name = 'lauserri.zona'
-
+    _name = "lauserri.zona"
     nombreZona = fields.Char()
     fechaCreacionZona = fields.Date()
     granja = fields.Many2One('lauserri.granja')

@@ -4,7 +4,6 @@ from odoo import models, fields, api
 
 class GranjaEntity(models.Model):
       _name = 'lauserri.granja'
-
       nombreGranja = fields.Char()
       fechaCreacion = fields.Date()
       granjero = fields.Many2One('lauserri.granjero', string="Granja del granjero")

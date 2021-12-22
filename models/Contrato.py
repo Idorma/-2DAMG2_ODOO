@@ -7,7 +7,4 @@ class Contrato(models.Model):
     trabajador=fields.Many2one('lauserri.trabajador')
     granja=fields.Many2one('lauserri.granja')
     fechaContratacion=fields.Date()
-    salario=fields.Integer()
-    
-    
-    
+    salario=fields.Integer   
