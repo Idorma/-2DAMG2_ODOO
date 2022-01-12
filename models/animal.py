@@ -44,3 +44,4 @@ class AnimalEntity(models.Model):
                             ('b', 'MACHO')
                             ], string='SexoAnimal')
     zona = fields.Many2one('lauserri.zona')
+    
