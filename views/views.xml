@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <!--<record model="ir.actions.act_window" id="action_lauserri_list">
-            <field name="name">zonas</field>
-            <field name="res_model">lauserri.zona</field>
+       <record model="ir.actions.act_window" id="action_lauserri_list">
+            <field name="name">zona</field>
+            <field name="res_model">lauserri.granjero</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="main_lauserri_menu" name="Lauserri"/>
         <menuitem id="lauserri_menu" name="Open Lauserri" parent="main_lauserri_menu"/>
-        <menuitem id="zona_lauserri_menu" name="lauserri" parent="lauserri_menu" action="action_lauserri_list"/>
+        <menuitem id="zona_lauserri_menu" name="Zona" parent="lauserri_menu" action="action_lauserri_list"/>
+        <!--
+        <menuitem id="granja_lauserri_menu" name="Granja" parent="lauserri_menu" action="action_lauserri_list"/>
+        <menuitem id="animal_lauserri_menu" name="Animal" parent="lauserri_menu" action="action_lauserri_list"/>
+        <menuitem id="trabajador_lauserri_menu" name="Trabajador" parent="lauserri_menu" action="action_lauserri_list"/>
 -->
         <!-- actions opening views on models -->
         <!--
