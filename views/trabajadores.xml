@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.actions.act_window" id="trabajador_list_action">
+            <field name="name">Trabajadores</field>
+            <field name="res_model">lauserri.trabajador</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="trabajador_form_view">
+            <field name="name">trabajador.form</field>
+            <field name="model">lauserri.trabajador</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form String="Formulario Trabajador">
+                    <group colspan="6" col="2">
+                        <group colspan="2" col="2">
+                            <separator string="Datos" colspan="2"/>
+                            <field name="name"/>
+                            <field name="login"/>
+                            <field name="email"/>
+                            <field name="password"/>
+                        </group>
+                        <group colspan="2">
+                            <separator string="Trabajo" colspan="2"/>
+                            <field name="contratos"/>
+                            <field name="zonas"/>
+                        </group>  
+                    </group>
+                </form>   
+            </field>
+        </record>
+        
+        <menuitem id="trabajadores_menu" name="Trabajadores" parent="lauserri_menu" action="trabajador_list_action"/>
+
+    </data>
+</odoo>

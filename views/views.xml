@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record model="ir.actions.act_window" id="action_lauserri_list">
-            <field name="name">Granjero</field>
-            <field name="res_model">lauserri.granjero</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-        </record>
         <menuitem id="main_lauserri_menu" name="Lauserri"/>
         <menuitem id="lauserri_menu" name="Lauserri" parent="main_lauserri_menu"/>
-        <menuitem id="granjero_lauserri_menu" name="Granjero" parent="lauserri_menu" action="action_lauserri_list"/>
     </data>
 </odoo>
