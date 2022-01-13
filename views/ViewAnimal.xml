@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_animal">
+            <field name="name">Animal</field>
+            <field name="res_model">lauserri.animal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="animal_lauserri_menu" name="Animal" parent="lauserri_menu" action="action_lauserri_animal"/>
+        <record model="ir.ui.view" id="view_id">
+            <field name="name">ViewAnimal</field>
+            <field name="model">lauserri.animal</field>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <form string="Animal form">
+                    <group>
+                        <separator string="Datos" colspan="2"/>
+                        <field name="nombreAnimal"/>
+                    </group>
+                    <group>
+                        <field name="tipo"/>
+                        <field name="sexo"/>
+                        <field name="estado"/>
+                        <field name="zona"/>
+                    </group>
+                    <group>
+                        <field name="fechaNacimiento"/>
+                    </group>
+                </form>
+            </field>
+        </record> 
+    </data>
+</odoo>
