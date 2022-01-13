@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_zona">
+            <field name="name">Zona</field>
+            <field name="res_model">lauserri.zona</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="view_id">
+            <field name="name">view.name</field>
+            <field name="model">lauserri.zona</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Idea form">
+                    <group colspan="4">
+                        <group colspan="3" col="3">
+                            <separator string="Formulario" colspan="3"/>
+                            <field name="nombreZona"/>
+                            <field name="fechaCreacionZona"/>
+                            <field name="granja"/>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Animales" colspan="2"/>
+                            <field name="animales"/>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Trabajadores" colspan="2"/>
+                            <field name="trabajadores"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <menuitem id="zona_lauserri_menu" name="Zona" parent="lauserri_menu" action="action_lauserri_zona"/>
+    </data>
+</odoo>
