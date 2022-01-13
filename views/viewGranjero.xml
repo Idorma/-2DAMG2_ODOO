@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_granjero">
+            <field name="name">Granjero</field>
+            <field name="res_model">lauserri.granjero</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="view_id">
+            <field name="name">Granjero</field>
+            <field name="model">lauserri.granjero</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Idea form">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <separator string="Datos" colspan="2"/>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="login"/>
+                            <field name="password"/>
+                        </group>
+
+                        <group colspan="2" col="2">
+                            <separator string="Granjas" colspan="2"/>
+                            <field name="granjas"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <menuitem id="granjero_lauserri_menu" name="Granjero" parent="lauserri_menu" action="action_lauserri_granjero"/>
+    </data>
+</odoo>
