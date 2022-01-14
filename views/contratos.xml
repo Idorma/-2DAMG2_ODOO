@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.actions.act_window" id="contrato_list_action">
+            <field name="name">Contratos</field>
+            <field name="res_model">lauserri.contrato</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+        
+        <record model="ir.ui.view" id="contrato_form_view">
+            <field name="name">contrato.form</field>
+            <field name="model">lauserri.contrato</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form String="Formulario Contrato">
+                    <group colspan="4" col="2">
+                        <group colspan="2" col="2">
+                            <separator string="Datos" colspan="2"/>
+                            <field name="trabajador"/>
+                            <field name="granja"/>
+                            <field name="fechaContratacion"/>
+                            <field name="salario"/>
+                        </group>
+                    </group>
+                </form>   
+            </field>
+        </record>
+        
+        <menuitem id="contratos_menu" name="Contratos" parent="lauserri_menu" action="contrato_list_action"/>
+
+    </data>
+</odoo>
