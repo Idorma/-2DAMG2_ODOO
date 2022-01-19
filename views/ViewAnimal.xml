@@ -8,26 +8,39 @@
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="animal_lauserri_menu" name="Animal" parent="lauserri_menu" action="action_lauserri_animal"/>
-        <record model="ir.ui.view" id="view_id">
+        <record model="ir.ui.view" id="view_form">
             <field name="name">ViewAnimal</field>
             <field name="model">lauserri.animal</field>
             <field name="arch" type="xml">
                 <!-- view content: <form>, <tree>, <graph>, ... -->
                 <form string="Animal form">
-                    <group>
-                        <separator string="Datos" colspan="2"/>
-                        <field name="nombreAnimal"/>
-                    </group>
-                    <group>
-                        <field name="tipo"/>
-                        <field name="sexo"/>
-                        <field name="estado"/>
-                        <field name="zona"/>
-                    </group>
-                    <group>
-                        <field name="fechaNacimiento"/>
+                    <group colspan="2">
+                        <group>
+                            <separator string="Datos" colspan="2"/>
+                            <field string="Nombre del animal" name="nombreAnimal"/>
+                            <field string="Fecha de Nacimiento" name="fechaNacimiento"/>
+                            <field string="Zona" name="zona"/>
+                        </group>
+                        <group>
+                            <separator string="Estado" colspan="2"/>
+                            <field string="Tipo" name="tipo"/>
+                            <field string="Sexo" name="sexo"/>
+                            <field string="Estado" name="estado"/>
+                        </group>
                     </group>
                 </form>
+            </field>
+        </record> 
+        <record model="ir.ui.view" id="view_tree">
+            <field name="name">ViewAnimal</field>
+            <field name="model">lauserri.animal</field>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <tree>
+                    <field string="Nombre del Animal" name="nombreAnimal"/>
+                    <field string="Estado" name="estado"/>
+                    <field string="Zona" name="zona"/>
+                </tree>
             </field>
         </record> 
     </data>
