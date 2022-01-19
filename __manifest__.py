@@ -27,7 +27,10 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/contratos.xml',
+        'views/trabajadores.xml',
         'views/templates.xml',
+        'views/viewGranjero.xml',
+        'views/viewZona.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

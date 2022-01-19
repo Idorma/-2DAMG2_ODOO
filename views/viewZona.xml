@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_zona">
+            <field name="name">Zona</field>
+            <field name="res_model">lauserri.zona</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="view_id">
+            <field name="name">view.name</field>
+            <field name="model">lauserri.zona</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Idea form">
+                    <group colspan="2">
+                        <group colspan="2" col="2">
+                            <separator string="Datos" colspan="2"/>
+                            <field name="nombreZona" string="Nombre"/>
+                            <field name="fechaCreacionZona" string="Fecha de creación"/>
+                            <field name="granja" string="Granja"/>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Animales" colspan="2"/>
+                            <field name="animales">
+                                <tree>
+                                    <field name="nombreAnimal" string="Nombre"/>
+                                    <field name="tipo" string="Tipo"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Trabajadores" colspan="2"/>
+                            <field name="trabajadores">
+                                <tree>
+                                    <field name="name" string="Nombre"/>
+                                    <field name="login" string="Login"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_tree">
+            <field name="name">Zona</field>
+            <field name="model">lauserri.zona</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombreZona" string="Nombre"/>
+                    <field name="fechaCreacionZona" string="Fecha de creación"/>
+                    <field name="granja" string="Granja"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="zona_lauserri_menu" name="Zona" parent="lauserri_menu" action="action_lauserri_zona"/>
+    </data>
+</odoo>

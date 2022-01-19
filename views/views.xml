@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-    
         <menuitem id="main_lauserri_menu" name="Lauserri"/>
         <menuitem id="lauserri_menu" name="Lauserri" parent="main_lauserri_menu"/>
-    
     </data>
 </odoo>
