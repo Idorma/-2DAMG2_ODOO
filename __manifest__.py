@@ -31,6 +31,7 @@
         'views/trabajadores.xml',
         'views/templates.xml',
         'views/viewGranjero.xml',
+        'views/viewGranja.xml',
         'views/viewZona.xml',
     ],
     # only loaded in demonstration mode
