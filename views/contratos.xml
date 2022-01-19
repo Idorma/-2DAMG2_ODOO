@@ -10,6 +10,18 @@
             
         </record>
         
+        <record model="ir.ui.view" id="contrato_tree_view">
+            <field name="name">contrato.tree</field>
+            <field name="model">lauserri.contrato</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Contratos">
+                    <field name="granja"/>
+                    <field name="trabajador"/>
+                </tree>
+            </field>
+        </record>
+        
         <record model="ir.ui.view" id="contrato_form_view">
             <field name="name">contrato.form</field>
             <field name="model">lauserri.contrato</field>
@@ -21,7 +33,7 @@
                             <separator string="Datos" colspan="2"/>
                             <field name="trabajador"/>
                             <field name="granja"/>
-                            <field name="fechaContratacion"/>
+                            <field name="fechaContratacion" string="Fecha de contratacion"/>
                             <field name="salario"/>
                         </group>
                     </group>
