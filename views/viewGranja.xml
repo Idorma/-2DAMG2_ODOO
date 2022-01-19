@@ -34,8 +34,8 @@ and open the template in the editor.
                             <separator string="Zonas" colspan="2"/>
                             <field name="zonas">
                                 <tree>
-                                    <field name="nombreZona"/>
-                                    <field name="fechaCreacionZona"/>
+                                    <field string="Nombre de la zona" name="nombreZona"/>
+                                    <field string="Fecha de creacion de la zona" name="fechaCreacionZona"/>
                                 </tree>
                             </field>
                         </group>
@@ -43,9 +43,9 @@ and open the template in the editor.
                             <separator string="Contratos" colspan="2"/>
                             <field name="contratos">
                                 <tree>
-                                    <field name="trabajador"/>
-                                    <field name="fechaContratacion"/>
-                                    <field name="salario"/>
+                                    <field string="Nombre del trabajador" name="trabajador"/>
+                                    <field string="Fecha de contratacion" name="fechaContratacion"/>
+                                    <field string="Salario" name="salario"/>
                                 </tree>
                             </field>
                         </group>
