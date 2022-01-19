@@ -7,7 +7,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <record model="ir.ui.view" id="view_id">
+        <record model="ir.ui.view" id="view_form">
             <field name="name">Granjero</field>
             <field name="model">lauserri.granjero</field>
             <field name="priority" eval="16"/>
@@ -16,18 +16,34 @@
                     <group colspan="4">
                         <group colspan="2" col="2">
                             <separator string="Datos" colspan="2"/>
-                            <field name="name"/>
+                            <field name="name" string="Nombre"/>
                             <field name="email"/>
                             <field name="login"/>
                             <field name="password"/>
                         </group>
-
                         <group colspan="2" col="2">
                             <separator string="Granjas" colspan="2"/>
-                            <field name="granjas"/>
+                            <field name="granjas">
+                                <tree>
+                                    <field name="nombreGranja" string="Nombre"/>
+                                    <field name="fechaCreacion" string="Fecha de creación"/>
+                                </tree>
+                            </field>
                         </group>
                     </group>
                 </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_tree">
+            <field name="name">Granjero</field>
+            <field name="model">lauserri.granjero</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Nombre"/>
+                    <field name="login"/>
+                    <field name="email"/>
+                </tree>
             </field>
         </record>
         <menuitem id="granjero_lauserri_menu" name="Granjero" parent="lauserri_menu" action="action_lauserri_granjero"/>
