@@ -19,7 +19,7 @@
                             <field name="name" string="Nombre"/>
                             <field name="email"/>
                             <field name="login"/>
-                            <field name="password"/>
+                            <field name="password" password="True"/>
                         </group>
                         <group colspan="2" col="2">
                             <separator string="Granjas" colspan="2"/>
