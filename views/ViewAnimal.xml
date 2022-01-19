@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_animal">
+            <field name="name">Animal</field>
+            <field name="res_model">lauserri.animal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="animal_lauserri_menu" name="Animal" parent="lauserri_menu" action="action_lauserri_animal"/>
+        <record model="ir.ui.view" id="view_form">
+            <field name="name">ViewAnimal</field>
+            <field name="model">lauserri.animal</field>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <form string="Animal form">
+                    <group colspan="2">
+                        <group>
+                            <separator string="Datos" colspan="2"/>
+                            <field string="Nombre del animal" name="nombreAnimal"/>
+                            <field string="Fecha de Nacimiento" name="fechaNacimiento"/>
+                            <field string="Zona" name="zona"/>
+                        </group>
+                        <group>
+                            <separator string="Estado" colspan="2"/>
+                            <field string="Tipo" name="tipo"/>
+                            <field string="Sexo" name="sexo"/>
+                            <field string="Estado" name="estado"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record> 
+        <record model="ir.ui.view" id="view_tree">
+            <field name="name">ViewAnimal</field>
+            <field name="model">lauserri.animal</field>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <tree>
+                    <field string="Nombre del Animal" name="nombreAnimal"/>
+                    <field string="Estado" name="estado"/>
+                    <field string="Zona" name="zona"/>
+                </tree>
+            </field>
+        </record> 
+    </data>
+</odoo>
