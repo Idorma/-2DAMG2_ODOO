@@ -8,7 +8,7 @@
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="animal_lauserri_menu" name="Animal" parent="lauserri_menu" action="action_lauserri_animal"/>
-        <record model="ir.ui.view" id="view_form">
+        <record model="ir.ui.view" id="view_form_animal">
             <field name="name">ViewAnimal</field>
             <field name="model">lauserri.animal</field>
             <field name="arch" type="xml">
@@ -31,7 +31,7 @@
                 </form>
             </field>
         </record> 
-        <record model="ir.ui.view" id="view_tree">
+        <record model="ir.ui.view" id="view_tree_animal">
             <field name="name">ViewAnimal</field>
             <field name="model">lauserri.animal</field>
             <field name="arch" type="xml">
@@ -43,5 +43,17 @@
                 </tree>
             </field>
         </record> 
+        <record model="ir.ui.view" id="view_search_animal">
+            <field name="name">ViewAnimal</field>
+            <field name="model">lauserri.animal</field>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <search>
+                    <field name="nombreAnimal"/>
+                    <field name="estado"/>
+                    <field name="zona"/>
+                </search>
+            </field>
+        </record>
     </data>
 </odoo>
