@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from . import usr
 from . import contrato
 from . import zona
 from . import trabajador

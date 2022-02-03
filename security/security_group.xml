@@ -1,10 +1,10 @@
-<openerp>
+<odoo>
      <data>
- <record id="your_group_id_goes_here_1" model="res.groups">
-            <field name="name">Your Group Name 1</field>
+        <record id="lauserri_control" model="res.groups">
+            <field name="name">Lauserri control completo</field>
         </record>
-        <record id="your_group_id_goes_here_2" model="res.groups">
-            <field name="name">Your Group Name 2</field>
+        <record id="lauserri_read" model="res.groups">
+            <field name="name">Lauserri lectura</field>
         </record>
      </data>
- </openerp>     
+ </odoo>     

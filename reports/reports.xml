@@ -1,0 +1,154 @@
+<odoo>
+<data>
+    <report
+        id="report_contratos"
+        model="lauserri.contrato"
+        string="Contrato Report"
+        name="lauserri.report_contrato_view"
+        file="lauserri.report_contrato"
+        report_type="qweb-html" />
+    <!--Template definition-->    
+    <template id="report_contrato_view">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">                  
+                        <h3>Contrato:</h3>
+                        <ul>
+                            <t t-foreach="doc.trabajador" t-as="trabajador">
+                                <li> <b>Trabajador:</b> <span t-field="trabajador.login"/></li>
+                            </t>
+                            <t t-foreach="doc.granja" t-as="granja">
+                                <li> <b>Granja:</b> <span t-field="granja.nombreGranja"/></li>
+                            </t>
+                                <li> <b>Salario:</b> <span t-field="doc.salario"/></li>
+                                <li> <b>Fecha de contratacion:</b> <span t-field="doc.fechaContratacion"/></li>
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+    <report
+        id="report_zonas"
+        model="lauserri.zona"
+        string="Zona Report"
+        name="lauserri.report_zona_view"
+        file="lauserri.report_zona"
+        report_type="qweb-html" />
+    <!--Template definition-->    
+    <template id="report_zona_view">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">                  
+                        <h3>Zona:</h3>
+                        <ul>
+                            <li> <b>Nombre: </b> <span t-field="doc.nombreZona"/></li>
+                            <li> <b>Fecha de creacion:</b> <span t-field="doc.fechaCreacionZona"/></li>
+                               <t t-foreach="doc.granja" t-as="granja">
+                                <li> <b>Granja:</b> <span t-field="granja.nombreGranja"/></li>
+                            </t>
+                             <li> <b>Animales: </b>
+                            <t t-foreach="doc.animales" t-as="animal">
+                               
+                                <ul>
+                                    <li><b>Nombre:</b> <span t-field="animal.nombreAnimal"/></li>
+                                </ul>
+                               
+                            </t>
+                             </li> 
+                               <li> <b>Trabajadores: </b>
+                             <t t-foreach="doc.trabajadores" t-as="trabajador">
+                                <ul>
+                                    <li><b>Usuario:</b> <span t-field="trabajador.login"/></li>
+                                </ul>
+                            </t>
+                             </li> 
+                           
+                                
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+    <report
+        id="report_granjas"
+        model="lauserri.granja"
+        string="Granja Report"
+        name="lauserri.report_granja_view"
+        file="lauserri.report_granja"
+        report_type="qweb-html" />
+    <!--Template definition-->    
+    <template id="report_granja_view">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">                  
+                        <h3>Granja:</h3>
+                        <ul>
+                            <li> <b>Nombre: </b> <span t-field="doc.nombreGranja"/></li>
+                            <li> <b>Fecha de creacion: </b> <span t-field="doc.fechaCreacion"/></li>
+                               <t t-foreach="doc.granjero" t-as="granjero">
+                                <li> <b>Nombre: </b> <span t-field="granjero.login"/></li>
+                            </t>
+                             <li> <b>Zonas: </b>
+                            <t t-foreach="doc.zonas" t-as="zona">
+                               
+                                <ul>
+                                    <li><b>Nombre: </b> <span t-field="zona.nombreZona"/></li>
+                                </ul>
+                               
+                            </t>
+                             </li> 
+                               <li> <b>Contratos: </b>
+                             <t t-foreach="doc.contratos" t-as="contrato">
+                                <ul>
+                                    <t t-foreach="contrato.trabajador" t-as="trabajador">
+                                        <li> <b>Trabajador:</b> <span t-field="trabajador.login"/></li>
+                                    </t>
+                                </ul>
+                            </t>
+                             </li>                               
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+    <report
+        id="report_animales"
+        model="lauserri.animal"
+        string="Animal Report"
+        name="lauserri.report_animal_view"
+        file="lauserri.report_animal"
+        report_type="qweb-html" />
+    <!--Template definition-->    
+    <template id="report_animal_view">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">                  
+                        <h3>Animal:</h3>
+                        <ul>
+                            <li> <b>Nombre: </b> <span t-field="doc.nombreAnimal"/></li>
+                            <li> <b>Fecha de nacimiento:</b> <span t-field="doc.fechaNacimiento"/></li>
+                            <li> <b>Tipo: </b> <span t-field="doc.tipo"/></li>
+                            <li> <b>Sexo: </b> <span t-field="doc.sexo"/></li>
+                            <li> <b>Estado: </b> <span t-field="doc.estado"/></li>
+                            
+                            <t t-foreach="doc.zona" t-as="zona">
+                                <li> <b>Zona: </b> <span t-field="zona.nombreZona"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</data>
+</odoo>

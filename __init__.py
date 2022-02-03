@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import controllers.controllers
+import models.usr
 import models.contrato
 import models.zona
 import models.trabajador
