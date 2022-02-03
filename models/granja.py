@@ -9,3 +9,13 @@ class GranjaEntity(models.Model):
       granjero = fields.Many2one('lauserri.granjero', string="Granja del granjero")
       zonas = fields.One2many('lauserri.zona', 'granja', string="Zonas de la granja")
       contratos = fields.One2many('lauserri.contrato', 'granja', string="Contratos de la granja")
+      
+      @api.constrains('fechaCreacion')
+    def _validar_fecha_actual(self):
+        if self.fechaCreacion > fields.Date.today():
+            raise exceptions.ValidationError("La fecha de creacion no puede ser posterior a la actual")
+        
+    @api.onchange('fechaCreacion')
+    def _control_fecha_actual(self):
+        if self.fechaCreacion > fields.Date.today():
+            raise exceptions.ValidationError("La fecha de creacion no puede ser posterior a la actual")
