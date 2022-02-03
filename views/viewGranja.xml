@@ -34,8 +34,8 @@ and open the template in the editor.
                             <separator string="Zonas" colspan="2"/>
                             <field name="zonas">
                                 <tree>
-                                    <field name="nombreZona"/>
-                                    <field name="fechaCreacionZona"/>
+                                    <field string="Nombre de la zona" name="nombreZona"/>
+                                    <field string="Fecha de creacion de la zona" name="fechaCreacionZona"/>
                                 </tree>
                             </field>
                         </group>
@@ -43,9 +43,9 @@ and open the template in the editor.
                             <separator string="Contratos" colspan="2"/>
                             <field name="contratos">
                                 <tree>
-                                    <field name="trabajador"/>
-                                    <field name="fechaContratacion"/>
-                                    <field name="salario"/>
+                                    <field string="Nombre del trabajador" name="trabajador"/>
+                                    <field string="Fecha de contratacion" name="fechaContratacion"/>
+                                    <field string="Salario" name="salario"/>
                                 </tree>
                             </field>
                         </group>
@@ -59,9 +59,20 @@ and open the template in the editor.
             <field name="arch" type="xml">
                 <tree>
                     <field string="Nombre de la granja" name="nombreGranja"/>
-                    <field string="Fecha de creación de la granja" name="fechaCreacion"/>
+                    <field string="Fecha de creacion de la granja" name="fechaCreacion"/>
                     <field string="Granjero" name="granjero"/>
                 </tree>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="lauserri.search">
+            <field name="name">Granja</field>
+            <field name="model">lauserri.granja</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombreGranja"/>
+                    <field name="fechaCreacion"/>
+                    <field name="granjero"/>
+                </search>
             </field>
         </record>
         <menuitem id="granja_lauserri_menu" name="Granja" parent="lauserri_menu" action="action_lauserri_granja"/>
