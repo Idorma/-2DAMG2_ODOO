@@ -1,2 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_lauserri_lauserri,lauserri.lauserri,lauserri.model_lauserri_contrato,lauserri.lauserri_control,1,1,1,1
+control_lauserri_contrato,lauserri.lauserri,model_lauserri_contrato,lauserri.lauserri_control,1,1,1,1
+control_lauserri_granja,lauserri.lauserri,lauserri.model_lauserri_granja,lauserri.lauserri_control,1,1,1,1
+control_lauserri_animal,lauserri.lauserri,lauserri.model_lauserri_animal,lauserri.lauserri_control,1,1,1,1
+control_lauserri_zona,lauserri.lauserri,lauserri.model_lauserri_zona,lauserri.lauserri_control,1,1,1,1
+control_lauserri_trabajador,lauserri.lauserri,lauserri.model_lauserri_trabajador,lauserri.lauserri_control,1,1,1,1
+control_lauserri_granjero,lauserri.lauserri,lauserri.model_lauserri_granjero,lauserri.lauserri_control,1,1,1,1
+access_lauserri_contrato,lauserri.lauserri,lauserri.model_lauserri_contrato,lauserri.lauserri_read,1,0,0,0
+access_lauserri_granja,lauserri.lauserri,lauserri.model_lauserri_granja,lauserri.lauserri_read,1,0,0,0
+access_lauserri_animal,lauserri.lauserri,lauserri.model_lauserri_animal,lauserri.lauserri_read,1,0,0,0
+access_lauserri_zona,lauserri.lauserri,lauserri.model_lauserri_zona,lauserri.lauserri_read,1,0,0,0
+access_lauserri_trabajador,lauserri.lauserri,lauserri.model_lauserri_trabajador,lauserri.lauserri_read,1,0,0,0
+access_lauserri_granjero,lauserri.lauserri,lauserri.model_lauserri_granjero,lauserri.lauserri_read,1,0,0,0
