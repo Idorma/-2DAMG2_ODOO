@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import api
+from odoo import exceptions
+from odoo import fields
+from odoo import models
 
 class GranjaEntity(models.Model):
       _name = 'lauserri.granja'
@@ -10,7 +13,7 @@ class GranjaEntity(models.Model):
       zonas = fields.One2many('lauserri.zona', 'granja', string="Zonas de la granja")
       contratos = fields.One2many('lauserri.contrato', 'granja', string="Contratos de la granja")
       
-      @api.constrains('fechaCreacion')
+    @api.constrains('fechaCreacion')
     def _validar_fecha_actual(self):
         if self.fechaCreacion > fields.Date.today():
             raise exceptions.ValidationError("La fecha de creacion no puede ser posterior a la actual")
