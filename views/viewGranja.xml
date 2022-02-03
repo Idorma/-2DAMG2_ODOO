@@ -59,9 +59,20 @@ and open the template in the editor.
             <field name="arch" type="xml">
                 <tree>
                     <field string="Nombre de la granja" name="nombreGranja"/>
-                    <field string="Fecha de creación de la granja" name="fechaCreacion"/>
+                    <field string="Fecha de creacion de la granja" name="fechaCreacion"/>
                     <field string="Granjero" name="granjero"/>
                 </tree>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="lauserri.search">
+            <field name="name">Granja</field>
+            <field name="model">lauserri.granja</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombreGranja"/>
+                    <field name="fechaCreacion"/>
+                    <field name="granjero"/>
+                </search>
             </field>
         </record>
         <menuitem id="granja_lauserri_menu" name="Granja" parent="lauserri_menu" action="action_lauserri_granja"/>
