@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api
+from odoo import exceptions
 from odoo import fields
 from odoo import models
 
@@ -45,3 +46,12 @@ class AnimalEntity(models.Model):
                             ], string='SexoAnimal')
     zona = fields.Many2one('lauserri.zona')
     
+    @api.constrains('fechaNacimiento')
+    def _validar_fecha_actual(self):
+        if self.fechaNacimiento > fields.Date.today():
+            raise exceptions.ValidationError("La fecha de nacimiento no puede ser posterior a la actual")
+        
+    @api.onchange('fechaNacimiento')
+    def _control_fecha_actual(self):
+        if self.fechaNacimiento > fields.Date.today():
+            raise exceptions.ValidationError("La fecha de nacimiento no puede ser posterior a la actual")
