@@ -7,7 +7,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <record model="ir.ui.view" id="view_id">
+        <record model="ir.ui.view" id="view_form_zona">
             <field name="name">view.name</field>
             <field name="model">lauserri.zona</field>
             <field name="priority" eval="16"/>
@@ -42,7 +42,7 @@
                 </form>
             </field>
         </record>
-        <record model="ir.ui.view" id="view_tree">
+        <record model="ir.ui.view" id="view_tree_zona">
             <field name="name">Zona</field>
             <field name="model">lauserri.zona</field>
             <field name="priority" eval="16"/>

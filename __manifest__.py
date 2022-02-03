@@ -26,11 +26,13 @@
     'data': [
         'security/security_group.xml',
         'security/ir.model.access.csv',
+        'views/ViewAnimal.xml',
         'views/views.xml',
         'views/contratos.xml',
         'views/trabajadores.xml',
         'views/templates.xml',
         'views/viewGranjero.xml',
+        'views/viewGranja.xml',
         'views/viewZona.xml',
         'reports/reports.xml',
     ],

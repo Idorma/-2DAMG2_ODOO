@@ -60,6 +60,19 @@
             </field>
         </record>
         
+        <record model="ir.ui.view" id="trabajador_search_view">
+            <field name="name">trabajador.search</field>
+            <field name="model">lauserri.trabajador</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="login"/>
+                    <field name="email"/>
+                </search>
+            </field>
+        </record>
+        
         <menuitem id="trabajadores_menu" name="Trabajadores" parent="lauserri_menu" action="trabajador_list_action"/>
 
     </data>

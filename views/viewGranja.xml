@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lauserri_granja">
+            <field name="name">Granja</field>
+            <field name="res_model">lauserri.granja</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="lauserri.list">
+            <field name="name">Granja</field>
+            <field name="model">lauserri.granja</field>
+            <field name="arch" type="xml">
+                <form string="Idea form">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <separator string="Datos de la granja" colspan="2"/>
+                            <field name="nombreGranja"/>
+                            <field name="fechaCreacion"/>
+                        </group>
+
+                        <group colspan="2" col="2">
+                            <separator string="Granjero" colspan="2"/>
+                            <field name="granjero"/>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Zonas" colspan="2"/>
+                            <field name="zonas">
+                                <tree>
+                                    <field string="Nombre de la zona" name="nombreZona"/>
+                                    <field string="Fecha de creacion de la zona" name="fechaCreacionZona"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group colspan="2" col="2">
+                            <separator string="Contratos" colspan="2"/>
+                            <field name="contratos">
+                                <tree>
+                                    <field string="Nombre del trabajador" name="trabajador"/>
+                                    <field string="Fecha de contratacion" name="fechaContratacion"/>
+                                    <field string="Salario" name="salario"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="lauserri.tree">
+            <field name="name">Granja</field>
+            <field name="model">lauserri.granja</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field string="Nombre de la granja" name="nombreGranja"/>
+                    <field string="Fecha de creación de la granja" name="fechaCreacion"/>
+                    <field string="Granjero" name="granjero"/>
+                </tree>
+            </field>
+        </record>
+        <menuitem id="granja_lauserri_menu" name="Granja" parent="lauserri_menu" action="action_lauserri_granja"/>
+    </data>
+</odoo>
