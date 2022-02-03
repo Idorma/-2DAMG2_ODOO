@@ -31,10 +31,10 @@
                     <group colspan="4" col="2">
                         <group colspan="2" col="2">
                             <separator string="Datos" colspan="2"/>
-                            <field name="trabajador"/>
-                            <field name="granja"/>
-                            <field name="fechaContratacion" string="Fecha de contratacion"/>
-                            <field name="salario"/>
+                            <field name="trabajador" required="True"/>
+                            <field name="granja" required="True"/>  
+                            <field name="fechaContratacion" string="Fecha de contratacion" required="True"/>
+                            <field name="salario" required="True"/>
                         </group>
                     </group>
                 </form>   
