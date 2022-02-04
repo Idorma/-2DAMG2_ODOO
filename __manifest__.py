@@ -26,8 +26,8 @@
     'data': [
         'security/security_group.xml',
         'security/ir.model.access.csv',
-        'views/ViewAnimal.xml',
         'views/views.xml',
+        'views/ViewAnimal.xml',
         'views/contratos.xml',
         'views/trabajadores.xml',
         'views/templates.xml',

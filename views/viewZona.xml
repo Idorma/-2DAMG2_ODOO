@@ -54,6 +54,16 @@
                 </tree>
             </field>
         </record>
+        <record model="ir.ui.view" id="view_search_zona">
+            <field name="name">Zona</field>
+            <field name="model">lauserri.zona</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombreZona"/>
+                    <field name="fechaCreacionZona"/>
+                </search>
+            </field>
+        </record>
         <menuitem id="zona_lauserri_menu" name="Zona" parent="lauserri_menu" action="action_lauserri_zona"/>
     </data>
 </odoo>
